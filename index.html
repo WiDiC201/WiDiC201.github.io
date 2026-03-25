@@ -1010,18 +1010,7 @@
         let isAdminLoggedIn = false;
 
         // Initialize with sample reviews if database is empty
-        async function initializeSampleData() {
-            const reviewsSnapshot = await getDocs(collection(db, 'reviews'));
-            if (reviewsSnapshot.empty) {
-                const sampleReviews = [
-                    
-                ];
-
-                for (const review of sampleReviews) {
-                    await addDoc(collection(db, 'reviews'), review);
-                }
-            }
-        }
+        
 
         // Track page visits
         async function trackVisit(page) {
