@@ -1015,13 +1015,44 @@
             if (reviewsSnapshot.empty) {
                 const sampleReviews = [
                     {
-                       
+                        name: 'Sarah Johnson',
+                        course: 'Web Development',
+                        rating: 5,
+                        text: 'Amazing experience! Aaron and Rithvik made learning web development so fun and easy to understand. I built my first website in just 2 weeks!',
+                        date: new Date('2024-12-15').toLocaleDateString(),
+                        approved: true,
+                        featured: true,
+                        timestamp: new Date('2024-12-15')
+                    },
+                    {
+                        name: 'Michael Chen',
+                        course: 'Python Fundamentals',
+                        rating: 5,
+                        text: 'Best coding camp ever! The instructors are super knowledgeable and patient. I went from zero coding knowledge to building my own projects.',
+                        date: new Date('2024-12-20').toLocaleDateString(),
+                        approved: true,
+                        featured: false,
+                        timestamp: new Date('2024-12-20')
+                    },
+                    {
+                        name: 'Emma Rodriguez',
+                        course: 'AI & Machine Learning',
+                        rating: 5,
+                        text: 'The AI course blew my mind! I never thought I could understand machine learning, but the way they teach makes it so accessible. Highly recommend!',
+                        date: new Date('2025-01-05').toLocaleDateString(),
+                        approved: true,
+                        featured: true,
+                        timestamp: new Date('2025-01-05')
+                    }
+                ];
 
                 for (const review of sampleReviews) {
                     await addDoc(collection(db, 'reviews'), review);
                 }
             }
         }
+
+
 
         // Track page visits
         async function trackVisit(page) {
